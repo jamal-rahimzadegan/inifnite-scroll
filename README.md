@@ -28,10 +28,8 @@ export default function InfiniteScroll() {
             });
     }
 
-    const loadMorePosts = () => {
-        getPhotos(offset)
-    }
-
+    const loadMorePosts = () => getPhotos(offset)
+   
     //  handle what happens when reaching end of the list
     const doOnReachEnd = (entities) => {
         const target = entities[0];
