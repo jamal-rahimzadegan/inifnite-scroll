@@ -22,10 +22,7 @@ export default function InfiniteScroll() {
 
     const getPhotos = (offset = 1) => {
         const url = `https://jsonplaceholder.typicode.com/photos?_page=${offset}&_limit=10`
-        axios.get(url)
-            .then(res => {
-                setPosts([...posts, ...res.data])
-            });
+        axios.get(url).then(res => setPosts([...posts, ...res.data]));
     }
 
     const loadMorePosts = () => getPhotos(offset)
